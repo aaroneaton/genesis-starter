@@ -8,8 +8,8 @@ class GS_Assets {
 
 		self::$instance = $this;
 
-		// add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
-		// add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
