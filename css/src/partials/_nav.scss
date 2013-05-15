@@ -1,0 +1,51 @@
+#nav {
+	display: none;
+}
+
+@mixin mobile-menu {
+	display: block;
+	padding: 20px;
+	background-color: gray;
+	color: white;
+
+	&:hover {
+		background-color: shade(gray, 20%);
+	}
+}
+
+#mobile-menu-button a {
+	display: block;
+	padding: 20px 10px;
+}
+
+.menu-item a {
+	@include mobile-menu;
+
+	&.anchor {
+		display: none;
+	}
+}
+
+.gototop {
+	background-color: gray;
+
+	a {
+		@include mobile-menu;
+	}
+}
+
+.navigation {
+	a {
+		padding: 10px 0;
+	}
+	.alignleft {
+		@include column(6);
+	}
+	.alignright {
+		@include column(6);
+
+		a {
+			float: right;
+		}
+	}
+}

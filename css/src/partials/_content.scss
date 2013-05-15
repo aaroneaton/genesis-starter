@@ -1,0 +1,12 @@
+.entry-title {
+	text-align: center;
+}
+
+.entry-content {
+	@include padding-trailer();
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,35 @@
+$columns: 12;
+$column-width: 60;
+$gutter-width: 20;
+
+$total-width: 100%;
+
+#wrap {
+	max-width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#header {
+	@include column(9);
+}
+
+#mobile-menu {
+	@include column(3);
+}
+
+#nav {
+	@include column(12);
+}
+
+#inner {
+	@include column(12);
+}
+
+#mobile-menu-footer {
+	@include column(12);
+}
+
+#footer {
+	@include column(12);
+}

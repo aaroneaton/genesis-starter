@@ -1,0 +1,22 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// Import compass parts
+@import "compass";
+@import "compass/reset";
+
+// Import semantic.gs
+@import "src/grid";
+
+// Import custom SCSS elements
+@import "src/variables";
+@import "src/mixins";
+@import "src/functions";
+
+// Import custom styling
+@import "src/typography";
+@import "partials/_layout.scss";
+@import "partials/_nav.scss";
+@import "partials/_content.scss";
