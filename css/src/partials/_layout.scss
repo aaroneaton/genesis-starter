@@ -26,10 +26,42 @@ $total-width: 100%;
 	@include column(12);
 }
 
+.sidebar {
+	@include column(12);
+}
+
+.navigation {
+	@include column(12);
+
+	.alignright a {
+		padding: 0;
+	}
+
+	.alignleft, .alignright {
+		@include column(6);
+	}
+
+}
+
 #mobile-menu-footer {
 	@include column(12);
 }
 
 #footer {
 	@include column(12);
+}
+
+@media screen and (min-width: $break-small) {
+
+	.navigation {
+		@include column(4);
+		
+		.alignleft, .alignright {
+			@include column(6);
+		}
+	}
+
+	.widget {
+		@include column(6);
+	}
 }

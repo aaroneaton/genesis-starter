@@ -3,5 +3,5 @@
 })(jQuery);
 
 /*
-//@ sourceMappingURL=scripts.min.js.map
+//@ sourceMappingURL=scripts.js.map
 */
