@@ -10,11 +10,12 @@ module.exports = (grunt) ->
           bare: true
           sourceMap: true
         files:
-          'js/scripts.min.js': 'js/src/scripts.coffee'
+          'js/scripts.js': 'js/src/*.coffee'
     compass:
       dist:
         options:
           config: 'config.rb'
+          specify: ['css/src/screen.scss', 'css/src/ie.scss', 'css/src/print.scss']
     jshint:
       files: [
         'js/scripts.min.js'
@@ -25,7 +26,17 @@ module.exports = (grunt) ->
           console: true
           module: true
           document: true
+        force: true
     csslint:
+      options:
+        'star-property-hack': false
+        'duplicate-properties': false
+        'unique-headings': false
+        'ids': false
+        'display-property-grouping': false
+        'floats': false
+        'outline-none': false
+        force: true
       src: ['css/*.css']
     cssmin:
       compress:
@@ -45,7 +56,7 @@ module.exports = (grunt) ->
   @loadNpmTasks 'grunt-contrib-watch'
 
   @registerTask 'default', ['coffee', 'jshint', 'compass']
-  @registerTask 'package', ['default', 'cssmin']
+  @registerTask 'package', ['default', 'cssmin', 'csslint']
 
   @event.on 'watch', (action, filepath) =>
     @log.writeln('#{filepath} has #{action}')

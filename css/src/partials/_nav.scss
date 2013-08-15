@@ -21,10 +21,11 @@
 .menu-item a {
 	@include mobile-menu;
 
-	&.anchor {
+}
+
+.anchor {
 		display: none;
 	}
-}
 
 .gototop {
 	background-color: gray;
@@ -47,5 +48,18 @@
 		a {
 			float: right;
 		}
+	}
+}
+
+@media screen and (min-width: $break-small) {
+	#nav {
+		display: block;
+		.menu-item {
+			float: left;
+		}
+	}
+
+	#mobile-menu-button, #mobile-menu-footer, .gototop {
+		display: none;
 	}
 }

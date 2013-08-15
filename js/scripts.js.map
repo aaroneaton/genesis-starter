@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "file": "scripts.min.js",
+  "file": "scripts.js",
   "sourceRoot": "src/",
   "sources": [
     "scripts.coffee"

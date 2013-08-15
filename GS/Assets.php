@@ -8,8 +8,8 @@ class GS_Assets {
 
 		self::$instance = $this;
 
-		// add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
-		// add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'register_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
@@ -20,7 +20,7 @@ class GS_Assets {
 		// We are registering Modernizr separately
 		wp_register_script(
 			'gs_modernizer',
-			get_stylesheet_directory_uri() . '/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js',
+			'//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js',
 			array(),
 			false,
 			false
@@ -29,7 +29,7 @@ class GS_Assets {
 		// Register the foundation scripts
 		wp_register_script(
 			'gs_app',
-			get_stylesheet_directory_uri() . '/js/scripts-ck.js',
+			get_stylesheet_directory_uri() . '/js/scripts.js',
 			array( 'jquery' ),
 			false,
 			true
