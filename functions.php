@@ -19,8 +19,9 @@ class GenStart {
 
 	public function __construct() {
 
-		// Load up the plugin
+		// Load up the theme
 		add_action( 'init', array( $this, 'init' ) );
+		add_action( 'genesis_setup', array( $this, 'genesis_setup' ) );
 
 	}
 
@@ -32,6 +33,13 @@ class GenStart {
 
 		// Setup the navigation
 		$gs_navigation = new GS_Navigation;
+
+	}
+
+	public function setup() {
+
+		add_theme_support( 'html5' );
+		add_theme_support( 'genesis-responsive-viewport' );
 
 	}
 
